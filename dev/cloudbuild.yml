@@ -1,0 +1,16 @@
+steps:
+# Terraform initialize 
+- name: 'hashicorp/terraform'
+  args: ['init']
+
+# Terraform validate
+- name: 'hashicorp/terraform'
+  args: ['validate']
+
+# Terraform plan
+- name: 'hashicorp/terraform'
+  args: ['plan']
+
+# Terraform apply
+- name: 'hashicorp/terraform'
+  args: ['apply', '-auto-approve']
