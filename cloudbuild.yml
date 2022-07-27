@@ -1,4 +1,4 @@
 steps:
 # Terraform initialize 
 - name: 'hashicorp/terraform'
-  args: ['terraform', 'init']
+  args: ['init']
