@@ -1,0 +1,12 @@
+steps:
+# Let's pull the latest terraform image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['pull', 'hashicorp/terraform']
+
+# Let's make sure it's tagged correctly
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'hashicorp/terraform', 'gcr.io/ace-345/terraform']
+
+# Let's throw it in Google Repository
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/ace-345/terraform']
